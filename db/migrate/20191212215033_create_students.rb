@@ -3,10 +3,10 @@ class CreateStudents < ActiveRecord::Migration[5.2]
     create_table :students do |t|
       t.string :name
       t.text :previous_partners
-      t.integer :blue
-      t.integer :gold
-      t.integer :green
-      t.integer :orange
+      t.integer :blue, default: 0
+      t.integer :gold, default: 0
+      t.integer :green, default: 0
+      t.integer :orange, default: 0
       t.references :cohort, foreign_key: true
 
       t.timestamps

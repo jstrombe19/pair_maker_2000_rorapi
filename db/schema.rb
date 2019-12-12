@@ -25,10 +25,10 @@ ActiveRecord::Schema.define(version: 2019_12_12_215033) do
   create_table "students", force: :cascade do |t|
     t.string "name"
     t.text "previous_partners"
-    t.integer "blue"
-    t.integer "gold"
-    t.integer "green"
-    t.integer "orange"
+    t.integer "blue", default: 0
+    t.integer "gold", default: 0
+    t.integer "green", default: 0
+    t.integer "orange", default: 0
     t.bigint "cohort_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
